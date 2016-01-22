@@ -24,28 +24,28 @@ class NoCmdCommand extends PluginBase implements CommandExecutor{
                         switch($args[0]){
                             case "list":
                                 if($sender->hasPermission("no.cmd.list")){
-									$sender->sendMessage(TF::GREEN . "Available commands:");
+			    	    $sender->sendMessage(TF::GREEN . "Available commands:");
                                     for($c = 0; $c < count($cmds); $c++){
                                         $sender->sendMessage(TF::YELLOW . "- " . $cmds[$c]["name"]);
-									}
-									return true;
+			    		}
+			    	    return true;
                                 }
-								else{
+			    	else{
                                     $sender->sendMessage(TF::RED . "You do not have permissions for this command");
-									return true;
+			    	    return true;
                                 }
                                 break;
-							case "reload":
-							    if($sender->hasPermission("no.cmd.reload")){
-									$this->plugin->cfg->reload();
-									$sender->sendMessage(TF::GREEN . "Config reloaded!");
-									return true;
-								}
-								else{
-									$sender->sendMessage(TF::RED . "You do not have permissions for this command");
-									return true;
-								}
-								break;
+			    case "reload":
+				if($sender->hasPermission("no.cmd.reload")){
+				    $this->plugin->cfg->reload();
+				    $sender->sendMessage(TF::GREEN . "Config reloaded!");
+				    return true;
+				}
+				else{
+				    $sender->sendMessage(TF::RED . "You do not have permissions for this command");
+				    return true;
+				    }
+				    break;
                         }
                     }
                     break;

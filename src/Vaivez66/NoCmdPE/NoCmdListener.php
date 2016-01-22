@@ -27,7 +27,7 @@ class NoCmdListener extends PluginBase implements Listener{
             $default = $cmd["default"];
             $permission = $cmd["permission"];
             $noperm = $cmd["no-permission"];
-			$noperm = $this->plugin->getFormat()->translate($noperm);
+	    $noperm = $this->plugin->getFormat()->translate($noperm);
             $name = $cmd["name"];
             if(strtolower($m[0]) == strtolower($name)){
                 if($permission != null){
@@ -45,11 +45,11 @@ class NoCmdListener extends PluginBase implements Listener{
                                 $event->setCancelled(true);
                                 $player->sendMessage($noperm);
                             }
-							break;
+		    	    break;
                     }
-				}
+		}
                 else{
-					$event->setCancelled(true);
+		    $event->setCancelled(true);
                     $player->sendMessage(TF::RED . "Permission for this action hasn't been setted up");
                 }
             }

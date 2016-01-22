@@ -13,15 +13,15 @@ class NoCmd extends PluginBase implements Listener{
 
     public $cfg;
     private $cmd = [];
-	private $format;
-
+    private $format;
+    
     public function onEnable(){
         $this->saveDefaultConfig();
         $this->getLogger()->info(TF::GREEN . "NoCmdPE was enabled!");
         $this->getServer()->getPluginManager()->registerEvents(new NoCmdListener($this), $this);
         $this->getCommand("nocmd")->setExecutor(new NoCmdCommand($this));
         $this->cfg = new Config($this->getDataFolder() . "config.yml", Config::YAML, array());
-		$this->format = new NoCmdFormat($this);
+        $this->format = new NoCmdFormat($this);
     }
 
     /**
@@ -42,13 +42,13 @@ class NoCmd extends PluginBase implements Listener{
     public function runCmd($p, $m){
         return $this->getServer()->dispatchCommand($p, $m);
     }
-
+    
     /**
      * @return mixed
      */
-	
-	public function getFormat(){
-		return $this->format;
-	}
+    	
+    public function getFormat(){
+    	return $this->format;
+    }
 
 }

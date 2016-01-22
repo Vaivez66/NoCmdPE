@@ -1,0 +1,18 @@
+name: NoCmdPE
+main: Vaivez66\NoCmdPE\NoCmd
+version: 1.0.0
+api: 1.12.0
+load: POSTWORLD
+authors: [Vaivez66]
+description: "Make those commands feel easy to use"
+commands:
+   nocmd:
+      description: "Main command"
+      usage: "/nocmd <list|reload>"
+permissions:
+   no.cmd.list:
+      description: "Permission to get list of available commands"
+      default: op
+   no.cmd.reload:
+      description: "Permission to reload the config"
+      default: op  

@@ -1,0 +1,22 @@
+# name = "Your command name"                                   
+
+# permission = "Permission for perform that command"           
+
+# default =                                                    
+#  * true = Anyone can use that command                     
+#  * false = No one can use that unless op or have permission 
+
+# no-permission: "Message will send if you haven't permission"
+
+commands:
+
+  - name: "help"
+    permission: "help.no.cmd"
+    default: true
+    no-permission: "{RED}No one will help you!"
+
+  - name: "say"
+    permission: "say.no.cmd"
+    default: false
+    no-permission: "{RED}Wanna say something? {YELLOW}Denied!"
+  

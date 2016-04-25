@@ -50,7 +50,7 @@ class NoCmdListener extends PluginBase implements Listener{
 		}
                 else{
 		    $event->setCancelled(true);
-                    $player->sendMessage(TF::RED . "Permission for this action hasn't been setted up");
+                    $player->sendMessage(TF::RED . "Permission for this action hasn't been set up");
                 }
             }
         }
